@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- marked.js CDN (마크다운 렌더링용) -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Text Analyzer</h1>
+        <textarea id="inputText" rows="10" placeholder="여기에 텍스트를 입력하세요..."></textarea>
+
+        <div class="markdown-toggle">
+            <label>
+                <input type="checkbox" id="markdownCheckbox"> 마크다운 뷰 활성화
+            </label>
+        </div>
+
+        <div id="result">
+            <h3>분석 결과 (Analysis Results)</h3>
+            <p>글자 수 (공백 미포함): <span id="charCountNoSpaces">0</span></p>
+            <p>글자 수 (공백 포함) (Character Count including spaces): <span id="charCount">0</span></p>
+            <p>가장 많이 반복된 단어 3개 (Top 3 Most Repeated Words):</p>
+            <ol id="wordList"></ol>
+        </div>
+
+        <div id="markdownView" class="markdown-view" style="display: none;">
+            <h3>마크다운 뷰어 (Markdown Viewer)</h3>
+            <div id="markdownOutput"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
